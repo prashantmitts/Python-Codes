@@ -1,0 +1,16 @@
+def sqrt(n,a,b):
+    x = (a + b)//2
+    k = x*x
+    if (k == n):
+        return x
+    if (b-a == 1):
+        return a
+    if (k < n):
+        return sqrt(n,x,b)
+    else:
+        return sqrt(n,a,x)
+
+def srt(n):
+    return sqrt(n,0,n)
+
+print(srt(16))
